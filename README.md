@@ -9,6 +9,7 @@ npm install concurrently
 Then simply run with:
 
 ```
+npm install
 npm start
 ```
 
