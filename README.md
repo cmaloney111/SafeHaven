@@ -53,6 +53,8 @@ Also, make sure to create a .env file in express-backend and add
 and
 `TOKEN_SECRET = 1234`
 
+UI Prototype: https://www.figma.com/file/LEEXoiNaKNr2uPQo002aQm/SaveHaven-site?type=design&node-id=0%3A1&mode=design&t=1YXDdRgnNafMAqs2-1
+
 Project Description:
 SafeHaven is a company dedicated to optimizing storage management solutions for businesses. Our product scales easily, displays critical order insights, and is affordably priced.
 We offer a seamless inventory and order tracking system, suiting the needs of businesses in many industries.
