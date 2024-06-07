@@ -1,6 +1,8 @@
 
 Note for grader: Sequence Diagrams are the two '.png' files in the root of the repo. Also, the deployed app may take a few minutes to boot up.
 
+# How to run
+
 To run from the repository's root folder, install concurrently with:
 
 ```
@@ -25,6 +27,7 @@ Also, make sure to create a .env file in express-backend and add
 and
 `TOKEN_SECRET = 1234`
 
+# Configurations
 You can run a linter (specifically eslint) to find potential sources of error in the code with: 
 ```
 npm run eslint
@@ -38,9 +41,11 @@ npm run prettier
 
 And can add more rules to this in the .prettierrc file located in the root.
 
+# UI Prototype and Statement about Coding Standards
 We did not adopt any official coding style. Instead, we tried to match our original Figma as much as possible, which you can see here:
+ https://www.figma.com/file/LEEXoiNaKNr2uPQo002aQm/SaveHaven-site?type=design&node-id=0%3A1&mode=design&t=1YXDdRgnNafMAqs2-1
 
-UI Prototype: https://www.figma.com/file/LEEXoiNaKNr2uPQo002aQm/SaveHaven-site?type=design&node-id=0%3A1&mode=design&t=1YXDdRgnNafMAqs2-1
+# General
 
 Project Description:
 SafeHaven is a company dedicated to optimizing storage management solutions for businesses. Our product scales easily, displays critical order insights, and is affordably priced.
