@@ -29,11 +29,15 @@ You can run a linter (specifically eslint) to find potential sources of error in
 ```
 npm run eslint
 ```
+and can change what it ignores, warns, or errors for in the eslint.config.mjs file located in the root.
 
 You can also enforce a consistent style on the code with:
 ```
 npm run prettier
 ```
+
+And can add more rules to this in the .prettierrc file located in the root.
+
 
 UI Prototype: https://www.figma.com/file/LEEXoiNaKNr2uPQo002aQm/SaveHaven-site?type=design&node-id=0%3A1&mode=design&t=1YXDdRgnNafMAqs2-1
 
