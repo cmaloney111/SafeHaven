@@ -46,14 +46,12 @@ function getUsers(username, name, profilePicture) {
 }
 
 function getPassword(username) {
-  //same as get Users but uses findOne
   let query = {};
   query.username = username;
   return UserModel.findOne(query, {  _id: 1, password: 1 });
 }
 
 function getUsername(username) {
-  //same as get Users but uses findOne
   let query = {};
   query.username = username;
   return UserModel.findOne(query, { _id: 1, username: 1 });
@@ -93,8 +91,8 @@ function loginUser(req, res) {
     });
 }
 function signupUser(req, res) {
-  const salt = "$2b$10$5u3nVKlTV5RPpREyblmGqe"; //pregenerated salt
-  const { username, password } = req.body; // from form
+  const salt = "$2b$10$5u3nVKlTV5RPpREyblmGqe";
+  const { username, password } = req.body;
   if (!username || !password) {
     res.status(400).send("Bad request: Invalid input data.");
   } else {
@@ -121,7 +119,6 @@ function signupUser(req, res) {
 
 function authenticateUser(req, res, next) {
   const authHeader = req.headers["authorization"];
-  //Getting the 2nd part of the auth header (the token)
   const token = authHeader && authHeader.split(" ")[1];
   if (!token) {
     console.log("No token received");
@@ -130,7 +127,6 @@ function authenticateUser(req, res, next) {
     jwt.verify(token, process.env.TOKEN_SECRET, (error, decoded) => {
       if (decoded) {
         req.userID = decoded._id;
-        //console.log(req.userID);
         next();
       } else {
         console.log("JWT error:", error);
@@ -179,7 +175,6 @@ function addUser(user) {
 
 async function addProductToUser(id, productId) {
   try {
-    // Find the user and add the product to their list
     console.log(id);
     const user = await UserModel.findById(id);
     if (!user) {

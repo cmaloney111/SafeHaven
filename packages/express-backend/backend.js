@@ -12,7 +12,7 @@ const port = 8000;
 app.use(cors());
 app.use(express.json());
 
-// Routes
+
 const upload = multer({ dest: "uploads/" });
 app.use("/uploads", express.static("uploads"));
 
@@ -87,7 +87,7 @@ app.post("/users", (req, res) => {
 });
 
 app.post("/users/profile", userService.authenticateUser, (req, res) => {
-  const { bio, skills } = req.body; // from form
+  const { bio, skills } = req.body;
   const id = req.userID;
   userService.editProfile(id, bio, skills)
   .then((result) => {
@@ -226,8 +226,6 @@ app.patch("/products/:id", userService.authenticateUser, (req, res) => {
 });
 
 app.get("/products", userService.authenticateUser, async (req, res) => {
-  // const product = req.query.product;
-  // const quantity = req.query.quantity;
   const UserID = req.userID;
   try {
     const user = await userService.findUserById(UserID);
@@ -247,11 +245,8 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-//add_orders routes
+
 app.get("/orders", userService.authenticateUser, async (req, res) => {
-  //const id = req.query.id;
-  //const product = req.query.product;
-  //const quantity = req.query.quantity;
   const search = req.query.search;
   const UserID = req.userID;
   const user = await userService.findUserById(UserID);
@@ -332,8 +327,6 @@ app.delete("/orders/:id", userService.authenticateUser, (req, res) => {
     });
 });
 
-
-//order-units routes
 app.get("/order-units", userService.authenticateUser, (req, res) => {
   const id = req.query.id;
   const product = req.query.product;

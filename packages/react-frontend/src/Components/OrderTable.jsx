@@ -47,19 +47,14 @@ function TableBody(props) {
   if (props.orderData === null) {
     return <caption>Data Unavailable</caption>;
   }
-  //console.log(props.orderData);
   const rows = props.orderData.map((order, index) => {
     let arr_order = Array(order["items"]);
-    //console.log(order["_id"])
     console.log(order)
     if (order != undefined) {
       let each_item = arr_order.map((item) => {
         console.log(item);
         let item_arr = JSON.stringify(item).split(",");
         let item_id = item_arr[0].slice(item_arr[0].indexOf('"_id":') + 7, item_arr[0].length - 1);
-        //console.log(item_id);
-        //item = convertToDict(JSON.stringify(item));
-        //const item_count = item[0]["item_count"];
         let each_product = item.map((product, index) => {
           console.log(product);
           return (

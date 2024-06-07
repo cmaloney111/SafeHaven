@@ -16,9 +16,7 @@ function TableBody(props) {
   if (props.orderData === null) {
     return <caption>Data Unavailable</caption>;
   }
-  //console.log(props.orderData.length);
   const rows = props.orderData.map((order, index) => {
-    //console.log(order);
     return (
         <tr key={index}>
         <td>{order["product"]}</td>

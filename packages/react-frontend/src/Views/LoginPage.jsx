@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-//import Table from "../Components/Table";
 import Auth from "../Components/Auth";
 import "../Styles/Navbar.css";
 import Cookies from "js-cookie";
@@ -18,7 +17,6 @@ function Login() {
     })
       .then((response) => {
         if (!response.ok) {
-          // Handle the case where the server returns an error
           alert("Invalid username/password");
           throw new Error("Invalid username/password");
         }
@@ -26,12 +24,11 @@ function Login() {
       })
       .then((token) => {
         Cookies.remove("safeHavenToken");
-        // Here, 'token' contains the JWT token sent from the server
         Cookies.set("safeHavenToken", token, {
-          expires: 24 / 24, // 1 hour in days
-          path: "/", // cookie path
-          secure: false, // set to true if using HTTPS
-          sameSite: "strict" // or 'lax' depending on your requirements
+          expires: 24 / 24,
+          path: "/",
+          secure: false,
+          sameSite: "strict"
         });
         console.log(token);
         console.log(Cookies.get("safeHavenToken"));

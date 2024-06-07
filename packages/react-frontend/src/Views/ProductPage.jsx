@@ -50,7 +50,7 @@ function ProductPage() {
   }
 
   function updateProduct(event) {
-    event.preventDefault(); // Prevent the default form submission behavior
+    event.preventDefault();
 
     const updatedProduct = {
       product: formValues.product,

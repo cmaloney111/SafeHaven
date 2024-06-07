@@ -17,7 +17,6 @@ function ManageOrders() {
         } else {
           setOrders(null);
         }
-        //console.log(orders);
       })
       .catch((error) => {
         console.log(error);
@@ -25,7 +24,6 @@ function ManageOrders() {
   }, []);
 
   function removeOneOrder(order_id) {
-    //console.log(orders[0]["_id"]);
     const updated = orders.filter((order) => {
       return order["_id"] !== order_id;
     });
@@ -78,7 +76,6 @@ function ManageOrders() {
         } else {
           setOrders(null);
         }
-        //console.log(orders);
       })
       .catch((error) => {
         console.log(error);

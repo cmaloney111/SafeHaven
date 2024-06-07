@@ -17,21 +17,19 @@ function Signup() {
     })
       .then((response) => {
         if (!response.ok) {
-          // Handle the case where the server returns an error
           alert("Username already taken");
           throw new Error("Username already taken");
         }
         return response.text();
       })
       .then((token) => {
-        // Here, 'token' contains the JWT token sent from the server
         console.log(token);
         Cookies.remove("safeHavenToken");
         Cookies.set("safeHavenToken", token, {
-          expires: 24 / 24, // 1 hour in days
-          path: "/", // cookie path
-          secure: false, // set to true if using HTTPS
-          sameSite: "strict" // or 'lax' depending on your requirements
+          expires: 24 / 24,
+          path: "/", 
+          secure: false, 
+          sameSite: "strict"
         });
         navigate("/inventory");
       });

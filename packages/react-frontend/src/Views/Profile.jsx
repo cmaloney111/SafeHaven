@@ -48,7 +48,6 @@ function Profile() {
       formData.append("profilePicture", file);
 
       try {
-        // Send the file to the server for processing and storage in MongoDB
         const response = await axios.post("https://safehavenapp.azurewebsites.net//profile-picture", formData, {
           headers: addAuthHeader({
             "Content-Type": "multipart/form-data"
@@ -78,7 +77,7 @@ function Profile() {
         {
           Cookies.remove('safeHavenToken');
           alert('Profile Deleted');
-          navigate('/'); //go to homepage
+          navigate('/');
         }
     });
   }

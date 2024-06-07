@@ -6,14 +6,12 @@ const Logout = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-    // Remove the cookie
     Cookies.remove('safeHavenToken');
 
-    // Redirect to the homepage
     navigate("/");
   }, [navigate]);
 
-  return null; // This component does not need to render anything
+  return null;
 };
 
 export default Logout;

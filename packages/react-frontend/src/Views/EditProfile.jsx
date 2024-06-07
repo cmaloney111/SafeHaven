@@ -17,7 +17,6 @@ function EditProfile() {
     })
       .then((response) => {
         if (!response.ok) {
-          // Handle the case where the server returns an error
           throw new Error("User Not Found (Invalid Token)");
         }
         navigate("/profile");
