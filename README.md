@@ -60,6 +60,10 @@ Project Description:
 SafeHaven is a company dedicated to optimizing storage management solutions for businesses. Our product scales easily, displays critical order insights, and is affordably priced.
 We offer a seamless inventory and order tracking system, suiting the needs of businesses in many industries.
 
+Project vision: 
+For small businesses interested in shipping who need a software system to manage inventory logistics. Safe Haven is an inventory management software that is affordable, functional, and scalable. Unlike Katana, our product is inexpensive and accessible to small businesses.
+
+
 
 CSC307 Safe Haven Demo Video:
 https://youtu.be/EfknrWC4x_U
