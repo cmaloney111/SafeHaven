@@ -25,6 +25,16 @@ Also, make sure to create a .env file in express-backend and add
 and
 `TOKEN_SECRET = 1234`
 
+You can run a linter (specifically eslint) to find potential sources of error in the code with: 
+```
+npm run eslint
+```
+
+You can also enforce a consistent style on the code with:
+```
+npm run prettier
+```
+
 UI Prototype: https://www.figma.com/file/LEEXoiNaKNr2uPQo002aQm/SaveHaven-site?type=design&node-id=0%3A1&mode=design&t=1YXDdRgnNafMAqs2-1
 
 Project Description:
