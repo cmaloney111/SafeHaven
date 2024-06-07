@@ -38,6 +38,7 @@ npm run prettier
 
 And can add more rules to this in the .prettierrc file located in the root.
 
+We did not adopt any official coding style. Instead, we tried to match our original Figma as much as possible, which you can see here:
 
 UI Prototype: https://www.figma.com/file/LEEXoiNaKNr2uPQo002aQm/SaveHaven-site?type=design&node-id=0%3A1&mode=design&t=1YXDdRgnNafMAqs2-1
 
